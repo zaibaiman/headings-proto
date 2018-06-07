@@ -11,20 +11,20 @@ Crear un gestor de cabeceras e integrarlo a Placeit.
 ## Resulting questions and answers
 * ¿Quienes codificaron el actual gestor de cabeceras?
 ```
-R. Arzola
+Arzola
 ```
 * ¿Cualquier usuario puede cambiar las cabeceras?
 ```
-R. No
+No
 ```
 * ¿Que tipo de usuario puede cambiar las cabeceras?
 ```
-R. Administrador
+Administrador
 ```
 * ¿Que necesita hacer un administrador para gestionar cabeceras?
 ```
-  1. Iniciar sesión.
-  2. Dirigirse al panel de administración.
+1. Iniciar sesión.
+2. Dirigirse al panel de administración.
 ```
 * ¿Actualmente cual es el proceso para crear una cabecera?
 * ¿Actualmente como son las categorías guardadas en el sistema?
