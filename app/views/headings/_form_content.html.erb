@@ -1,0 +1,134 @@
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Meta Title</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control form-control-sm" name="meta_title" value="<%= @heading.meta_title %>">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Meta Description</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control form-control-sm" name="meta_description" value="<%= @heading.meta_description %>">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Heading</label>
+    <div class="col-sm-10">
+        <textarea class="form-control" name="heading" rows="3"><%= @heading.heading %></textarea>
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Subtitle</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control form-control-sm" name="subtitle" value="<%= @heading.subtitle %>">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Background Color</label>
+    <div class="col-sm-10">
+        <input type="color" class="form-control form-control-sm" name="solid_color" value="<%= @heading.solid_color %>" style="width: 50px">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Image</label>
+    <div class="col-sm-10">
+        <input type="file" class="form-control form-control-sm" name="image">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Video 1</label>
+    <div class="col-sm-10">
+        <input type="file" class="form-control form-control-sm">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Video 2</label>
+    <div class="col-sm-10">
+    <input type="file" class="form-control form-control-sm">
+    </div>
+</div>
+
+<h4>Slab 1</h4>
+<hr/>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Color</label>
+    <div class="col-sm-1">
+        <input type="color" class="form-control form-control-sm" name="slab1_color" value="<%= @heading.slab1_color %>" style="width: 50px">
+    </div>
+    <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Opacity</label>
+    <div class="col-sm-2">
+        <input type="range" min="1" max="100" name="slab1_opacity" value="<%= @heading.slab1_opacity %>">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Text Default</label>
+    <div class="col-sm-1">
+        <input type="color" class="form-control form-control-sm" name="slab1_txt_color" value="<%= @heading.slab1_txt_color %>" style="width: 50px">
+    </div>
+    <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Opacity</label>
+    <div class="col-sm-2">
+        <input type="range" name="slab1_txt_opacity" min="1" max="100" value="50" value="<%= @heading.slab1_txt_opacity %>">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Text Rollover</label>
+    <div class="col-sm-1">
+        <input type="color" class="form-control form-control-sm" name="slab1_txt_roll_color" value="<%= @heading.slab1_txt_roll_color %>" style="width: 50px">
+    </div>
+    <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Opacity</label>
+    <div class="col-sm-2">
+        <input type="range" name="slab1_txt_roll_opacity" min="1" max="100" value="50" <value="<%= @heading.slab1_txt_roll_opacity %>">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Text Selected</label>
+    <div class="col-sm-1">
+        <input type="color" class="form-control form-control-sm" name="slab1_txt_sel_color" value="<%= @heading.slab1_txt_sel_color %>" style="width: 50px">
+    </div>
+    <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Opacity</label>
+    <div class="col-sm-2">
+        <input type="range" name="slab1_txt_sel_opacity" min="1" max="100" value="50" value="<%= @heading.slab1_txt_sel_opacity %>">
+    </div>
+</div>
+
+<h4>Slab 2</h4>
+<hr/>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Color</label>
+    <div class="col-sm-1">
+        <input type="color" class="form-control form-control-sm" value="<%= @heading.solid_color %>" style="width: 50px">
+    </div>
+    <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Opacity</label>
+    <div class="col-sm-2">
+        <input type="range" min="1" max="100" value="50">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Text Default</label>
+    <div class="col-sm-1">
+        <input type="color" class="form-control form-control-sm" value="<%= @heading.solid_color %>" style="width: 50px">
+    </div>
+    <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Opacity</label>
+    <div class="col-sm-2">
+        <input type="range" min="1" max="100" value="50">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Text Rollover</label>
+    <div class="col-sm-1">
+        <input type="color" class="form-control form-control-sm" value="<%= @heading.solid_color %>" style="width: 50px">
+    </div>
+    <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Opacity</label>
+    <div class="col-sm-2">
+        <input type="range" min="1" max="100" value="50">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Text Selected</label>
+    <div class="col-sm-1">
+        <input type="color" class="form-control form-control-sm" value="<%= @heading.solid_color %>" style="width: 50px">
+    </div>
+    <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Opacity</label>
+    <div class="col-sm-2">
+        <input type="range" min="1" max="100" value="50">
+    </div>
+</div>

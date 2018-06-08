@@ -7,36 +7,9 @@
     <div class="panel-heading">New Heading</div>
     <div class="panel-body">
       <form action="/headings" method="post">
-        <div class="form-group row">
-          <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Meta Title</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control form-control-sm" name="meta_title">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Meta Description</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control form-control-sm" name="meta_description">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Headings</label>
-          <div class="col-sm-10">
-            <textarea class="form-control" name="headings" rows="3"></textarea>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Subtitle</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control form-control-sm" name="subtitle">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Background Color</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control form-control-sm" name="solid_color">
-          </div>
-        </div>
+        
+        <%= render 'form_content' %>
+        
         <div class="form-group row">
           <div class="col-sm-10">
             <button type="submit" class="btn btn-primary">Create</button>
