@@ -11,7 +11,6 @@ class HeadingsController < ApplicationController
     end
 
     def edit
-        puts "id: #{params[:id]}"
         @heading = Heading.find(params[:id])
     end
 
@@ -24,7 +23,11 @@ class HeadingsController < ApplicationController
             u.solid_color = params[:solid_color]
         end
         @heading.save
-        redirect_to @heading
+        redirect_to headings_path
+    end
+
+    def update
+        redirect_to headings_path
     end
 
     def destroy
