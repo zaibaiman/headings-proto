@@ -16,12 +16,15 @@ class HeadingsController < ApplicationController
     end
 
     def create
+        puts "params: #{params}"
+
         @heading = Heading.new do |u|
             u.meta_title = params[:meta_title]
             u.meta_description = params[:meta_description]
             u.heading = params[:heading]
             u.subtitle = params[:subtitle]
             u.solid_color = params[:solid_color]
+            u.image = params[:image]
 
             # slab1
             u.slab1_color = params[:slab1_color]

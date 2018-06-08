@@ -5,8 +5,8 @@ class CreateHeadings < ActiveRecord::Migration
       t.string :meta_description
       t.string :heading
       t.string :subtitle
-      t.string :image_url
-      t.string :video_url
+      t.string :image
+      t.string :video
       t.string :solid_color
       t.string :slab1_color
       t.float :slab1_opacity
