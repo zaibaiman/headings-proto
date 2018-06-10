@@ -19,49 +19,19 @@ class HeadingsController < ApplicationController
         puts "params: #{params}"
 
         @heading = Heading.new do |u|
-            u.meta_title = params[:meta_title]
-            u.meta_description = params[:meta_description]
-            u.heading = params[:heading]
-            u.subtitle = params[:subtitle]
-            u.solid_color = params[:solid_color]
-            u.image = params[:image]
-
-            # slab1
-            u.slab1_color = params[:slab1_color]
-            u.slab1_opacity = params[:slab1_opacity]
-            u.slab1_txt_color = params[:slab1_txt_color]
-            u.slab1_txt_opacity = params[:slab1_txt_opacity]
-            u.slab1_txt_roll_color = params[:slab1_txt_roll_color]
-            u.slab1_txt_roll_opacity = params[:slab1_txt_roll_opacity]
-            u.slab1_txt_sel_color = params[:slab1_txt_sel_color]
-            u.slab1_txt_sel_opacity = params[:slab1_txt_sel_opacity]
+            heading_params(u)
         end
-        @heading.save
+        @heading.save!
         redirect_to headings_path
     end
 
     def update
         @heading = Heading.find(params[:id])
-
         @heading.tap do |u|
-            u.meta_title = params[:meta_title]
-            u.meta_description = params[:meta_description]
-            u.heading = params[:heading]
-            u.subtitle = params[:subtitle]
-            u.solid_color = params[:solid_color]
-
-            # slab1
-            u.slab1_color = params[:slab1_color]
-            u.slab1_opacity = params[:slab1_opacity]
-            u.slab1_txt_color = params[:slab1_txt_color]
-            u.slab1_txt_opacity = params[:slab1_txt_opacity]
-            u.slab1_txt_roll_color = params[:slab1_txt_roll_color]
-            u.slab1_txt_roll_opacity = params[:slab1_txt_roll_opacity]
-            u.slab1_txt_sel_color = params[:slab1_txt_sel_color]
-            u.slab1_txt_sel_opacity = params[:slab1_txt_sel_opacity]
+            heading_params(u)
         end
 
-        if !@heading.save
+        if !@heading.save!
             render 'edit'
         end
         redirect_to headings_path
@@ -74,7 +44,36 @@ class HeadingsController < ApplicationController
     end
 
 private
-    def heading_params
-        params.require(:article).permit(:meta_title, :meta_description)
+    def heading_params(u)
+        u.home_url = params[:home_url]
+        u.meta_title = params[:meta_title]
+        u.meta_description = params[:meta_description]
+        u.heading = params[:heading]
+        u.subtitle = params[:subtitle]
+        u.solid_color = params[:solid_color]
+        u.image = params[:image]
+        u.remove_image = params[:remove_image] || nil
+        u.mp4_video = params[:mp4_video]
+        u.webm_video = params[:webm_video]
+
+        # slab1
+        u.slab1_color = params[:slab1_color]
+        u.slab1_opacity = params[:slab1_opacity]
+        u.slab1_txt_color = params[:slab1_txt_color]
+        u.slab1_txt_opacity = params[:slab1_txt_opacity]
+        u.slab1_txt_roll_color = params[:slab1_txt_roll_color]
+        u.slab1_txt_roll_opacity = params[:slab1_txt_roll_opacity]
+        u.slab1_txt_sel_color = params[:slab1_txt_sel_color]
+        u.slab1_txt_sel_opacity = params[:slab1_txt_sel_opacity]
+
+        # slab2
+        u.slab2_color = params[:slab2_color]
+        u.slab2_opacity = params[:slab2_opacity]
+        u.slab2_txt_color = params[:slab2_txt_color]
+        u.slab2_txt_opacity = params[:slab2_txt_opacity]
+        u.slab2_txt_roll_color = params[:slab2_txt_roll_color]
+        u.slab2_txt_roll_opacity = params[:slab2_txt_roll_opacity]
+        u.slab2_txt_sel_color = params[:slab2_txt_sel_color]
+        u.slab2_txt_sel_opacity = params[:slab2_txt_sel_opacity]
     end
 end

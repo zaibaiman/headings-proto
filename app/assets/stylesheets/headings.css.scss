@@ -1,6 +1,10 @@
 // Place all the styles related to the Headings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+table.headings > tbody td {
+    vertical-align: middle;
+}
+
 h4 {
     color: #9d9de8;
 }
@@ -8,4 +12,13 @@ h4 {
 label {
     font-weight: 400;
     font-size: 14px;
+}
+
+img.thumb {
+    margin-top: 4px;
+    max-width: 200px;
+}
+
+video.thumb {
+    margin-top: 4px;
 }

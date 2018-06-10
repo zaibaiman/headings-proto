@@ -6,7 +6,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">New Heading</div>
     <div class="panel-body">
-      <%= form_tag '/headings/' +  @heading.id.to_s, :method => :put do %>
+      <%= form_tag '/headings/' +  @heading.id.to_s, :method => :put, :multipart => true do %>
         <%= render 'form_content' %>
 
         <div class="form-group row">
