@@ -1,5 +1,6 @@
 HeadingsProto::Application.routes.draw do
   get "main" => 'main#index'
+  get "main/:category" => 'main#index'
   resources :headings
 
   root :to => 'main#index'

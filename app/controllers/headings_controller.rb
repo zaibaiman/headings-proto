@@ -54,7 +54,9 @@ private
         u.image = params[:image]
         u.remove_image = params[:remove_image] || nil
         u.mp4_video = params[:mp4_video]
+        u.remove_mp4_video = params[:remove_mp4_video] || nil
         u.webm_video = params[:webm_video]
+        u.remove_webm_video = params[:remove_webm_video] || nil
 
         # slab1
         u.slab1_color = params[:slab1_color]

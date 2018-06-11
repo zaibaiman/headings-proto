@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HeadingsProto</title>
-
   <%= csrf_meta_tags %>
 
   <!-- stylesheets -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
   <%= stylesheet_link_tag "application", :media => "all" %>
+
+  <%= yield :head %>
 
   <!-- javascripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

@@ -1,43 +1,85 @@
+<% content_for :head do %>
+    <% if @heading %>
+        <title><%= @heading.meta_title %></title>
+        <meta name="description" content="<%= @heading.meta_description %>">
+        <meta property="og:title" content="<%= @heading.meta_title %>">
+        <meta property="og:description" content="<%= @heading.meta_description %>">
+        <style>
+                .slab1 {
+                    background-color: <%= @heading.slab1_color %>;
+                    opacity: <%= @heading.slab1_opacity / 100.0 %>;
+                }
+
+                .navbar-default .navbar-nav>li>a.slab1-text {
+                    color: <%= @heading.slab1_txt_color %>;
+                    opacity: <%= @heading.slab1_txt_opacity / 100.0 %>;
+                }
+
+                .slab2 {
+                    background-color: <%= @heading.slab2_color %>;
+                    opacity: <%= @heading.slab2_opacity / 100.0 %>;
+                }
+
+                .navbar-default .navbar-nav>li>a.slab2-text {
+                    color: <%= @heading.slab2_txt_color %>;
+                    opacity: <%= @heading.slab2_txt_opacity / 100.0 %>;
+                }
+
+                .heading {
+                    background-color: <%= @heading.solid_color %>;
+                    background-image: url("<%= @heading.image.url %>");
+                }
+
+                video {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    object-fit: fill;
+                }
+        </style>
+    <% end %>
+<% end %>
+
 <div class="container">
       <!-- Static navbar -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default slab1">
         <div class="container-fluid">
-            <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Placeit</a>
-            </div>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/main">Placeit</a>
+                </div>
             <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Digital</a></li>
-                <li><a href="#">Apparel + Print</a></li>
-                <li><a href="#">Design</a></li>
-                <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+                <ul class="nav navbar-nav">
+                    <li><a href="/main/digital" class="slab1-text">Digital</a></li>
+                    <li><a href="/main/apparel" class="slab1-text">Apparel + Print</a></li>
+                    <li><a href="/main/design" class="slab1-text">Design</a></li>
                 </ul>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/headings">Admin <span class="sr-only">(current)</span></a></li>
-            </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/headings" class="slab1-text">Admin <span class="sr-only">(current)</span></a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
+
+    <nav class="navbar navbar-default slab2">
+        <div class="container-fluid">
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/main/digital" class="slab2-text">Digital</a></li>
+                    <li><a href="/main/apparel" class="slab2-text">Apparel + Print</a></li>
+                    <li><a href="/main/design" class="slab2-text">Design</a></li>
+                </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
     </nav>
 
     <!-- Main component for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron heading" style="position: relative">
+        <% if @heading and !@heading.mp4_video.file.nil? %>
+            <video width="320" height="260" controls>
+                <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4"/>
+            </video>
+        <%end %>
         <h1>Header example</h1>
         <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
     </div>
